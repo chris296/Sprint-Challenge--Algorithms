@@ -96,8 +96,113 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
-        # Fill this out
-        pass
+        # if self.can_move_right() is True:
+        #     self.swap_item()
+        #     self.move_right()
+        # if self.compare_item() == 1:
+        #     self.swap_item()
+        #     self.move_left()
+        #     self.swap_item()
+        #     self.move_right()
+        #     self.set_light_on()
+        #     return self.sort()
+        # if self.compare_item() == -1:
+        #     self.move_left()
+        #     self.swap_item()
+        #     self.move_right()
+        #     return self.sort()
+        # if self.can_move_right() is False and self.light_is_on() is True:
+        #     while self.can_move_left() is True:
+        #         self.move_left()
+        #     self.set_light_off()
+        #     return self.sort()
+        # if self.can_move_right() is False and self.light_is_on() is False:
+        #     return
+
+
+        # if self.can_move_right is True:
+        #     self.swap_item()
+        #     self.move_right()
+        # while self.compare_item == -1 and self.can_move_right() is True:
+        #     self.move_left()
+        #     self.swap_item()
+        #     self.move_right()
+        #     self.swap_item()
+        #     self.move_right()
+        # while self.compare_item == 1 and self.can_move_right() is True:
+        #     self.swap_item()
+        #     self.move_left()
+        #     self.swap_item()
+        #     self.move_right()
+        #     self.move_right()
+        #     self.set_light_on()
+        # if self.can_move_right() is False and self.light_is_on() is True:
+        #     self.set_light_off()
+        #     return self.sort()
+        # return
+
+        # self.set_light_off()
+        # while self.light_is_on() is False:
+        #     self.set_light_on()
+        #     while self.can_move_right() is True:
+        #         self.swap_item()
+        #         self.move_right()
+        #         if self.compare_item() == 1:
+        #             self.set_light_off()
+                    
+        
+        # self.set_light_off()
+        # # while light is off
+        # self.set_light_on()
+        # # check to see if i can move to the right
+        # while self.can_move_right() is True:
+        #     self.swap_item()
+        #     self move right
+        #     if self.compare_item == 1:
+        #         self.set_light_off()
+        self.set_light_off()
+        while self.light_is_on() is False:
+            self.set_light_on()
+            while self.can_move_right() is True:
+                self.swap_item()
+                self.move_right()
+                if self.compare_item() == 1:
+                    self.set_light_off()
+                    self.swap_item()
+                    self.move_left()
+                    self.swap_item()
+                    self.move_right()
+                if self.compare_item() == -1:
+                    self.move_left()
+                    self.swap_item()
+                    self.move_right()
+                if self.compare_item() == 0:
+                    self.move_left()
+                    self.swap_item()
+                    self.move_right()
+            if self.can_move_right() is False:
+                self.set_light_on()
+                while self.can_move_left() is True:
+                    self.swap_item()
+                    self.move_left()
+                    if self.compare_item() == 1:
+                        self.move_right()
+                        self.swap_item()
+                        self.move_left()
+                    if self.compare_item() == 0:
+                        self.move_right()
+                        self.swap_item()
+                        self.move_left()
+                    if self.compare_item() == -1:
+                        self.set_light_off()
+                        self.swap_item()
+                        self.move_right()
+                        self.swap_item()
+                        self.move_left()
+        return
+
+        
+
 
 
 if __name__ == "__main__":
